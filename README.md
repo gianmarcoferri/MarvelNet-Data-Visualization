@@ -10,8 +10,20 @@ MarvelNet is an interactive data visualization system designed to explore the in
 - **Statistics Panel**: Displays overall statistics such as the total number of connections, heroes, and movies.
 - **Responsive Design**: The layout adjusts to different screen sizes for an optimal user experience.
 
-## Snapshots
-Here are some snapshots of the system in action:
+## Preview
+Here are some snapshots of the system in action.
+
+Overview of the MarvelNet user interface:
+![marvelnet_interface](https://github.com/user-attachments/assets/16b8fee6-5440-4961-b11f-683247b78a4b)
+
+Detailed information displayed upon hovering over a node and clicking it:
+![node_details](https://github.com/user-attachments/assets/11531eb9-ec2d-4797-a6a4-5ef8b54f9243)
+
+Dynamic sizing of nodes based on their degree:
+![node_charge](https://github.com/user-attachments/assets/a8eb9905-cb62-499a-abe3-9722ea5ea9e7)
+
+Quick demonstration of key features:
+https://github.com/user-attachments/assets/06f32b92-21ed-4bfe-b697-918b7d1404cd
 
 ## Usage
 1. Clone the repository: ```git clone https://github.com/username/marvelnet.git```
@@ -19,4 +31,4 @@ Here are some snapshots of the system in action:
 3. Run ```python -m http.server``` (start simple http server)
 4. Open ```index.html```
    
-Or try it [here](https://rawcdn.githack.com/MicheleBag/GameOfThrones-DataVisualization/d520d1cf7d4551343727857e684bd9acd5630e4e/home.html)
+Or try it [here](https://raw.githack.com/gianmarcoferri/MarvelNet-Data-Visualization/refs/heads/main/index.html)
