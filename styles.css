@@ -1,0 +1,156 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+}
+
+svg {
+  display: block;
+  width: calc(100% - 250px); /* Adjust width to leave space for the menu */
+  height: 100vh;
+  cursor: default;
+}
+
+.menu {
+  width: 250px;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.menu h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.menu label {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+
+.menu input[type="range"] {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#charge-slider {
+  margin-bottom: 0;
+}
+
+.legend, .statistics, .filters, .node-info, .charge {
+  margin-top: 20px;
+}
+
+.legend h3, .statistics h3, .filters h3, .node-info h3, .charge h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.legend div, .statistics div, .filters label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.legend-color.hero {
+  background-color: steelblue;
+}
+
+.legend-color.movie {
+  background-color: green;
+}
+
+.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.node.hero {
+  fill: steelblue;
+}
+
+.node.movie {
+  fill: green;
+}
+
+.link {
+  stroke-width: 2px;
+  stroke: #999;
+  opacity: 0.6;
+  transition: stroke 0.2s ease-in-out;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #333;
+}
+
+.header p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.label {
+  font-size: 12px;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.node-info {
+  margin-top: 20px;
+}
+
+.node-info h3 {
+  margin-top: 0;
+}
+
+#node-details {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}

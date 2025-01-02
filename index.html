@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarvelNet</title>
+  <link rel="icon" type="image/x-icon" href="https://img1.picmix.com/output/stamp/normal/8/4/6/2/2362648_5ad0c.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>Marvel Universe Network</h1>
+    <p>Explore the connections between heroes and their movie appearances</p>
+  </div>
+  <div class="container">
+    <svg id="graph"></svg>
+    <div class="menu">
+      <div class="charge">
+        <h3>Node Charge</h3>
+        <input type="range" id="charge-slider" min="-500" max="-40" value="-200">
+      </div>
+      <div class="filters">
+        <h3>Filters</h3>
+        <label><input type="checkbox" id="show-heroes" checked> Show Heroes</label>
+        <label><input type="checkbox" id="show-movies" checked> Show Movies</label>
+        <label><input type="checkbox" id="dynamic-sizing"> Dynamic Node Sizing</label>
+      </div>
+      <div class="legend">
+        <h3>Legend</h3>
+        <div><span class="legend-color hero"></span> Hero</div>
+        <div><span class="legend-color movie"></span> Movie</div>
+      </div>
+      <div class="statistics">
+        <h3>Statistics</h3>
+        <div id="num-connections">Connections: 0</div>
+        <div id="num-heroes">Heroes: 0</div>
+        <div id="num-movies">Movies: 0</div>
+      </div>
+      <div class="node-info">
+        <h3>Node Informations</h3>
+        <div id="node-details">Select a node to see details</div>
+      </div>
+    </div>
+  </div>
+  <div class="tooltip"></div>
+  <script src="script.js"></script>
+</body>
+</html>
