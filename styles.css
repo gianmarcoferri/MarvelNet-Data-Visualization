@@ -12,7 +12,7 @@ body {
 
 svg {
   display: block;
-  width: calc(100% - 250px); /* Adjust width to leave space for the menu */
+  width: calc(100% - 250px);
   height: 100vh;
   cursor: default;
 }
@@ -45,15 +45,15 @@ svg {
   margin-bottom: 20px;
 }
 
-#charge-slider {
-  margin-bottom: 0;
+.filters {
+  margin-top: 10px;
 }
 
-.legend, .statistics, .filters, .node-info, .charge {
+.legend, .statistics, .node-info {
   margin-top: 20px;
 }
 
-.legend h3, .statistics h3, .filters h3, .node-info h3, .charge h3 {
+.legend h3, .statistics h3, .filters h3, .node-info h3 {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 18px;
