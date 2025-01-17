@@ -1,11 +1,13 @@
 // Load the XML dataset
 d3.xml('Dataset/marvel.xml').then(function(xml) {
+    // Parse the XML data into a graph structure
     const graphData = parseGraphData(xml);
     console.log("Parsed Graph Data:", graphData);
 
-    // Calculate and display statistics
+    // Calculate and display statistics about the graph
     displayStatistics(graphData);
 
+    // Create the graph visualization
     createGraph(graphData);
 }).catch(function(error) {
     console.error('Error loading or parsing XML data:', error);
@@ -13,6 +15,7 @@ d3.xml('Dataset/marvel.xml').then(function(xml) {
 
 // Function to create the graph
 function createGraph(graphData) {
+    // Set the dimensions for the SVG container
     const width = window.innerWidth - 250; // Adjust width to leave space for the menu
     const height = window.innerHeight;
 
@@ -24,8 +27,6 @@ function createGraph(graphData) {
         .attr('height', height)
         .append('g'); // Append a group element to the SVG for zooming
 
-    const tooltip = d3.select('.tooltip');
-
     // Create zoom behavior and disable initial zoom
     const zoom = d3.zoom().on('zoom', function(event) {
         svg.attr('transform', event.transform);
@@ -34,7 +35,7 @@ function createGraph(graphData) {
     // Apply zoom behavior to the SVG container
     d3.select('#graph').call(zoom);
 
-    // Calculate the degree of each node
+    // Calculate the degree of each node (number of connections)
     const degree = {};
     graphData.nodes.forEach(node => degree[node.id] = 0);
     graphData.links.forEach(link => {
@@ -42,7 +43,7 @@ function createGraph(graphData) {
         degree[link.target]++;
     });
 
-    // Create force simulation
+    // Create force simulation for the graph layout
     const simulation = d3.forceSimulation(graphData.nodes)
         .force('link', d3.forceLink(graphData.links).id(d => d.id).distance(100))
         .force('charge', d3.forceManyBody().strength(-200))
@@ -215,6 +216,7 @@ function parseGraphData(xml) {
     const nodes = [];
     const edges = [];
 
+    // Parse nodes
     xml.querySelectorAll('node').forEach(nodeElement => {
         nodes.push({
             id: nodeElement.getAttribute('id'),
@@ -223,6 +225,7 @@ function parseGraphData(xml) {
         });
     });
 
+    // Parse edges
     xml.querySelectorAll('edge').forEach(edgeElement => {
         edges.push({
             source: edgeElement.getAttribute('source'),
