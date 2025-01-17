@@ -14,16 +14,16 @@ MarvelNet is an interactive data visualization system designed to explore the in
 Here are some snapshots of the system in action.
 
 Overview of the MarvelNet user interface:
-![marvelnet_interface](https://github.com/user-attachments/assets/16b8fee6-5440-4961-b11f-683247b78a4b)
+![Image](https://github.com/user-attachments/assets/38aed2ca-f063-4136-b620-b0fcc779f290)
 
 Detailed information displayed upon hovering over a node and clicking it:
-![node_details](https://github.com/user-attachments/assets/11531eb9-ec2d-4797-a6a4-5ef8b54f9243)
+![Image](https://github.com/user-attachments/assets/b4d7de07-59be-40f4-98d4-e96f39852084)
 
 Dynamic sizing of nodes based on their degree:
-![node_charge](https://github.com/user-attachments/assets/a8eb9905-cb62-499a-abe3-9722ea5ea9e7)
+![Image](https://github.com/user-attachments/assets/5fc5d786-7d97-4bd8-9ea7-56365df87f91)
 
 Quick demonstration of key features:
-https://github.com/user-attachments/assets/06f32b92-21ed-4bfe-b697-918b7d1404cd
+![Video](https://github.com/user-attachments/assets/c9f6c54c-1350-4824-b0cd-1dafa6eca72a)
 
 ## Usage
 1. Clone the repository: ```git clone https://github.com/username/marvelnet.git```
