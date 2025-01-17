@@ -101,13 +101,6 @@ function createGraph(graphData) {
             .attr('y', d => d.y);
     });
 
-    // Update charge strength when the slider value changes
-    d3.select('#charge-slider').on('input', function() {
-        const chargeStrength = +this.value;
-        simulation.force('charge', d3.forceManyBody().strength(chargeStrength));
-        simulation.alpha(1).restart();
-    });
-
     // Toggle dynamic node sizing
     d3.select('#dynamic-sizing').on('change', function() {
         dynamicSizing = this.checked;
@@ -169,7 +162,7 @@ function createGraph(graphData) {
         d.fy = null;
     }
 
-    // Tooltip and mouse interactions
+    // Mouse interactions
     function mouseover(event, d) {
         // Find all connections for the hovered node
         const connections = graphData.links.filter(l => 
@@ -188,14 +181,6 @@ function createGraph(graphData) {
             return isConnected && isVisible ? 1 : 0;
         });
 
-        // Commented out tooltip logic to remove it
-        // Show tooltip
-        // tooltip.style("opacity", 1)
-        //    .html(`<strong>${d.name}</strong><br>
-        //           Type: ${d.type}<br>
-        //           Connections: ${connections.length}`)
-        //    .style("left", (event.pageX + 10) + "px")
-        //    .style("top", (event.pageY - 10) + "px");
     }
 
     function mouseout() {
@@ -204,10 +189,6 @@ function createGraph(graphData) {
         
         // Hide labels
         label.style("opacity", 0);
-
-        // Commented out tooltip logic to remove it
-        // Hide tooltip
-        // tooltip.style("opacity", 0);
     }
 
     // Function to display node details
