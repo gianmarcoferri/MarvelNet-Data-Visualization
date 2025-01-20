@@ -5,7 +5,7 @@ MarvelNet is an interactive data visualization system designed to explore the in
 - **Interactive Graph Visualization**: Uses a force-directed layout to dynamically position nodes (heroes and movies) and edges (connections) for clear and engaging visual representation.
 - **Dynamic Node Sizing**: Nodes can be resized based on the number of connections, highlighting the most prominent characters.
 - **Zoom and Pan**: Users can easily navigate the graph using zoom and pan functionalities.
-- **Node Details on Hover**: Hovering over a node displays detailed information about the hero or movie.
+- **Details on Hover**: Hovering over a node highlights its connections and shows the names of the affected nodes.
 - **Filters**: Users can filter the graph to display only heroes or only movies, customizing the visualization based on their interests.
 - **Statistics Panel**: Displays overall statistics such as the total number of connections, heroes, and movies.
 - **Responsive Design**: The layout adjusts to different screen sizes for an optimal user experience.
